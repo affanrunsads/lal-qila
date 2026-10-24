@@ -49,6 +49,7 @@
                 <a href="#about" class="hover:text-lalqila-gold transition-colors">About</a>
                 <a href="#menu" class="hover:text-lalqila-gold transition-colors">Menu</a>
                 <a href="#gallery" class="hover:text-lalqila-gold transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-lalqila-gold transition-colors">Reviews</a>
                 <a href="#reservation" class="hover:text-lalqila-gold transition-colors">Reservation</a>
             </div>
             <div class="md:hidden text-lalqila-gold text-2xl cursor-pointer">
@@ -110,7 +111,15 @@
                 <div class="w-24 h-1 bg-lalqila-red mx-auto"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Menu Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="menu-tab-btn active bg-lalqila-gold text-lalqila-dark font-bold font-heading px-6 py-2 uppercase tracking-wider rounded-sm transition-colors duration-300" data-target="menu-bbq">Barbecue</button>
+                <button class="menu-tab-btn bg-gray-800 text-white hover:bg-lalqila-gold hover:text-lalqila-dark font-bold font-heading px-6 py-2 uppercase tracking-wider rounded-sm transition-colors duration-300" data-target="menu-mughlai">Mughlai</button>
+                <button class="menu-tab-btn bg-gray-800 text-white hover:bg-lalqila-gold hover:text-lalqila-dark font-bold font-heading px-6 py-2 uppercase tracking-wider rounded-sm transition-colors duration-300" data-target="menu-desserts">Desserts</button>
+            </div>
+
+            <!-- BBQ Menu -->
+            <div id="menu-bbq" class="menu-category grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Item 1 -->
                 <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
                     <div class="overflow-hidden mb-4 rounded">
@@ -123,19 +132,79 @@
                 <!-- Item 2 -->
                 <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group mt-0 md:mt-8">
                     <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chicken Tikka" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Chicken Tikka</h4>
+                    <p class="text-gray-400 text-sm mb-4">Juicy chicken pieces marinated in yogurt and traditional spices, roasted to perfection.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lamb Chops" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Mutton Chops</h4>
+                    <p class="text-gray-400 text-sm mb-4">Tender lamb chops seasoned with our secret blend of spices and grilled over charcoal.</p>
+                </div>
+            </div>
+
+            <!-- Mughlai Menu (Hidden by default) -->
+            <div id="menu-mughlai" class="menu-category hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Item 1 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
+                    <div class="overflow-hidden mb-4 rounded">
                         <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mughlai" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
                     </div>
                     <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Authentic Mughlai</h4>
                     <p class="text-gray-400 text-sm mb-4">Rich Shahi Paneer, slow-cooked Nihari, and aromatic Biryani fit for emperors.</p>
                 </div>
 
+                <!-- Item 2 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group mt-0 md:mt-8">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Biryani" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Mutton Biryani</h4>
+                    <p class="text-gray-400 text-sm mb-4">Fragrant basmati rice layered with succulent mutton and saffron, slow-cooked in a sealed pot.</p>
+                </div>
+
                 <!-- Item 3 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nihari" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Beef Nihari</h4>
+                    <p class="text-gray-400 text-sm mb-4">Slow-cooked beef stew garnished with ginger, green chilies, and fresh coriander.</p>
+                </div>
+            </div>
+
+            <!-- Desserts Menu (Hidden by default) -->
+            <div id="menu-desserts" class="menu-category hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Item 1 -->
                 <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
                     <div class="overflow-hidden mb-4 rounded">
                         <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Desserts" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
                     </div>
                     <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Shahi Desserts</h4>
                     <p class="text-gray-400 text-sm mb-4">Indulge in Gulab Jamun, Shahi Tukda, and Kheer to complete your feast.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group mt-0 md:mt-8">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kulfi" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Pista Kulfi</h4>
+                    <p class="text-gray-400 text-sm mb-4">Traditional unchurned ice cream flavored with cardamom and loaded with pistachios.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rasmalai" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Rasmalai</h4>
+                    <p class="text-gray-400 text-sm mb-4">Soft paneer balls immersed in chilled creamy milk flavored with saffron.</p>
                 </div>
             </div>
 
@@ -153,17 +222,69 @@
         </div>
 
         <div class="flex flex-wrap gallery-grid w-full">
-            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
             </div>
-            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
             </div>
-            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
             </div>
-            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1585518419759-7ecc2a0ba731?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 5" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 6" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 7" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 8" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-lalqila-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-header">
+                <h3 class="text-lalqila-gold font-heading text-xl font-bold tracking-widest uppercase mb-2">Testimonials</h3>
+                <h2 class="text-4xl md:text-5xl font-subheading font-bold mb-4">What Our Guests Say</h2>
+                <div class="w-24 h-1 bg-lalqila-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Review 1 -->
+                <div class="review-card bg-gray-900 border border-gray-800 p-8 rounded-lg text-center hover:border-lalqila-gold transition-colors duration-300">
+                    <div class="text-lalqila-gold mb-4 text-xl">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"An absolute masterpiece of culinary art. The ambiance took me back to the Mughal era. The live BBQ is a must-try!"</p>
+                    <h4 class="text-white font-bold font-heading tracking-widest">- Sarah Khan</h4>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card bg-gray-900 border border-gray-800 p-8 rounded-lg text-center hover:border-lalqila-gold transition-colors duration-300">
+                    <div class="text-lalqila-gold mb-4 text-xl">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Perfect place for a family gathering. The buffet spread is enormous and every dish has authentic flavor. Highly recommended."</p>
+                    <h4 class="text-white font-bold font-heading tracking-widest">- Ahmed Ali</h4>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card bg-gray-900 border border-gray-800 p-8 rounded-lg text-center hover:border-lalqila-gold transition-colors duration-300">
+                    <div class="text-lalqila-gold mb-4 text-xl">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"The Shahi Tukda is to die for! We had an amazing corporate dinner here. The staff is courteous and the decor is stunning."</p>
+                    <h4 class="text-white font-bold font-heading tracking-widest">- Fatima Rehman</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -184,30 +305,30 @@
                 </div>
             </div>
 
-            <div class="md:w-1/2 bg-white text-lalqila-dark p-8 rounded shadow-xl reservation-form">
-                <form class="space-y-4">
+            <div class="md:w-1/2 bg-white text-lalqila-dark p-8 rounded shadow-xl reservation-form relative">
+                <form id="reservation-form" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold mb-1">Name</label>
-                            <input type="text" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors" placeholder="Your Name">
+                            <input type="text" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors" placeholder="Your Name">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold mb-1">Phone</label>
-                            <input type="tel" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors" placeholder="Your Phone">
+                            <input type="tel" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors" placeholder="Your Phone">
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-sm font-semibold mb-1">Date</label>
-                            <input type="date" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors">
+                            <input type="date" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold mb-1">Guests</label>
-                            <select class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors bg-transparent">
-                                <option>1 Person</option>
-                                <option>2 People</option>
-                                <option>3 People</option>
-                                <option>4+ People</option>
+                            <select required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors bg-transparent">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4+">4+ People</option>
                             </select>
                         </div>
                     </div>
@@ -217,6 +338,11 @@
                     </div>
                     <button type="submit" class="w-full bg-lalqila-red text-white font-heading font-bold uppercase tracking-widest py-4 mt-4 hover:bg-lalqila-dark transition-colors duration-300">Book Now</button>
                 </form>
+                <div id="reservation-success" class="hidden absolute inset-0 bg-white flex flex-col items-center justify-center p-8 text-center rounded">
+                    <i class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
+                    <h3 class="text-2xl font-subheading font-bold mb-2 text-lalqila-dark">Reservation Received!</h3>
+                    <p class="text-gray-600">Thank you for choosing LalQila. We will contact you shortly to confirm your booking.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -233,6 +359,12 @@
             <p class="text-sm">&copy; 2026 LalQila Restaurant. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black bg-opacity-90 flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-8 text-white text-4xl hover:text-lalqila-gold transition-colors">&times;</button>
+        <img id="lightbox-img" src="" alt="Expanded Image" class="max-w-full max-h-[90vh] object-contain rounded shadow-2xl">
+    </div>
 
     <!-- GSAP Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
