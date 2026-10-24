@@ -1,0 +1,39 @@
+/* Custom Styles to supplement Tailwind */
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #D4AF37;
+    color: #1a1a1a;
+}
+
+.shadow-text {
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.scrolled-nav {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8B0000;
+}

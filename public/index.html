@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LalQila Restaurant - A Royal Dining Experience</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (via CDN for rapid styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lalqila-red': '#8B0000',
+                        'lalqila-gold': '#D4AF37',
+                        'lalqila-dark': '#1a1a1a',
+                        'lalqila-bg': '#fdfbf7'
+                    },
+                    fontFamily: {
+                        'heading': ['Cinzel', 'serif'],
+                        'subheading': ['Playfair Display', 'serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-lalqila-bg text-lalqila-dark font-body overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 px-6 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-3xl font-heading font-bold text-lalqila-gold tracking-widest uppercase logo">
+                LalQila
+            </div>
+            <div class="hidden md:flex space-x-8 text-white font-semibold text-lg nav-links">
+                <a href="#home" class="hover:text-lalqila-gold transition-colors">Home</a>
+                <a href="#about" class="hover:text-lalqila-gold transition-colors">About</a>
+                <a href="#menu" class="hover:text-lalqila-gold transition-colors">Menu</a>
+                <a href="#gallery" class="hover:text-lalqila-gold transition-colors">Gallery</a>
+                <a href="#reservation" class="hover:text-lalqila-gold transition-colors">Reservation</a>
+            </div>
+            <div class="md:hidden text-lalqila-gold text-2xl cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542314831-c6a4d142104d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Mughal Architecture" class="w-full h-full object-cover parallax-bg" />
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-lalqila-dark opacity-80"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h2 class="text-lalqila-gold font-subheading text-2xl md:text-3xl italic mb-4 hero-elem">Welcome to</h2>
+            <h1 class="text-white font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-wider uppercase hero-elem shadow-text">LalQila</h1>
+            <p class="text-gray-200 font-body text-lg md:text-xl mb-10 hero-elem max-w-2xl mx-auto">Experience the grandeur of the Mughal era with authentic culinary masterpieces in a royal setting.</p>
+            <a href="#reservation" class="inline-block bg-lalqila-gold text-lalqila-dark font-bold font-heading px-8 py-4 uppercase tracking-widest hover:bg-white transition-colors duration-300 hero-elem rounded-sm">Book a Table</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-32 px-6 bg-lalqila-bg relative">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2 about-text">
+                <h3 class="text-lalqila-red font-heading text-xl font-bold tracking-widest uppercase mb-2">Our Story</h3>
+                <h2 class="text-4xl md:text-5xl font-subheading font-bold mb-6 text-lalqila-dark">A Royal Legacy Resurrected</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    LalQila is not just a restaurant; it is a journey back in time. Inspired by the majestic Red Fort, we bring the opulent lifestyle of the Mughal Emperors to the modern era.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Our thematic setting features intricate architecture, courtyards, and a mesmerizing ambiance. Relish our legendary buffet spread encompassing traditional Pakistani, Mughlai, Barbecue, and Continental cuisines, prepared by master chefs using centuries-old secret recipes.
+                </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ornamental_Motif_at_the_Red_Fort.jpg/320px-Ornamental_Motif_at_the_Red_Fort.jpg" alt="Motif" class="w-24 opacity-50 mix-blend-multiply" />
+            </div>
+            <div class="md:w-1/2 relative about-image">
+                <div class="absolute inset-0 border-4 border-lalqila-gold translate-x-6 translate-y-6 z-0"></div>
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Restaurant Interior" class="relative z-10 w-full h-auto shadow-2xl" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Section -->
+    <section id="menu" class="py-20 bg-lalqila-dark text-white relative">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-full">
+            <svg class="relative block w-full h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-lalqila-bg"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-header">
+                <h3 class="text-lalqila-gold font-heading text-xl font-bold tracking-widest uppercase mb-2">Culinary Delights</h3>
+                <h2 class="text-4xl md:text-5xl font-subheading font-bold mb-4">The Royal Buffet</h2>
+                <div class="w-24 h-1 bg-lalqila-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Item 1 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1544025162-811114bd41ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BBQ" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Live Barbecue</h4>
+                    <p class="text-gray-400 text-sm mb-4">Sizzling Seekh Kebabs, Reshmi Boti, and perfectly grilled Tikka, marinated in aromatic spices.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group mt-0 md:mt-8">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mughlai" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Authentic Mughlai</h4>
+                    <p class="text-gray-400 text-sm mb-4">Rich Shahi Paneer, slow-cooked Nihari, and aromatic Biryani fit for emperors.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-gray-900 border border-gray-800 p-6 rounded-lg hover:border-lalqila-gold transition-colors duration-300 group">
+                    <div class="overflow-hidden mb-4 rounded">
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Desserts" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h4 class="text-2xl font-subheading font-bold text-lalqila-gold mb-2">Shahi Desserts</h4>
+                    <p class="text-gray-400 text-sm mb-4">Indulge in Gulab Jamun, Shahi Tukda, and Kheer to complete your feast.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="text-white border-b-2 border-lalqila-gold pb-1 hover:text-lalqila-gold transition-colors font-heading uppercase tracking-wider text-sm">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Experience -->
+    <section id="gallery" class="py-20 bg-lalqila-bg overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 text-center section-header">
+            <h3 class="text-lalqila-red font-heading text-xl font-bold tracking-widest uppercase mb-2">The Ambiance</h3>
+            <h2 class="text-4xl md:text-5xl font-subheading font-bold text-lalqila-dark">A Glimpse of Royalty</h2>
+        </div>
+
+        <div class="flex flex-wrap gallery-grid w-full">
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="w-full md:w-1/4 h-64 overflow-hidden gallery-item">
+                <img src="https://images.unsplash.com/photo-1585518419759-7ecc2a0ba731?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-20 relative bg-lalqila-dark text-white bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1542314831-c6a4d142104d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2 flex flex-col justify-center reservation-info">
+                <h3 class="text-lalqila-gold font-heading text-xl font-bold tracking-widest uppercase mb-2">Book Your Visit</h3>
+                <h2 class="text-4xl md:text-5xl font-subheading font-bold mb-6">Reserve a Table</h2>
+                <p class="text-gray-300 mb-8">Secure your spot for an unforgettable evening. Whether it's a family gathering, corporate event, or a romantic dinner, we ensure a majestic experience.</p>
+
+                <div class="space-y-4 text-gray-300">
+                    <p class="flex items-center"><i class="fas fa-map-marker-alt text-lalqila-gold w-6"></i> 10/A, M.A.C.H.S Main Shahrah-e-Faisal, Karachi</p>
+                    <p class="flex items-center"><i class="fas fa-phone text-lalqila-gold w-6"></i> +92 21 111 525 745</p>
+                    <p class="flex items-center"><i class="fas fa-envelope text-lalqila-gold w-6"></i> info@lalqila.com</p>
+                    <p class="flex items-center"><i class="fas fa-clock text-lalqila-gold w-6"></i> 7:30 PM - 11:30 PM (Daily)</p>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 bg-white text-lalqila-dark p-8 rounded shadow-xl reservation-form">
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">Name</label>
+                            <input type="text" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">Phone</label>
+                            <input type="tel" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors" placeholder="Your Phone">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">Date</label>
+                            <input type="date" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">Guests</label>
+                            <select class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors bg-transparent">
+                                <option>1 Person</option>
+                                <option>2 People</option>
+                                <option>3 People</option>
+                                <option>4+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">Special Requests</label>
+                        <textarea class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-lalqila-red transition-colors resize-none h-20" placeholder="Any special requirements?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-lalqila-red text-white font-heading font-bold uppercase tracking-widest py-4 mt-4 hover:bg-lalqila-dark transition-colors duration-300">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 text-center border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-heading font-bold text-lalqila-gold tracking-widest uppercase mb-6">LalQila</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-lalqila-gold hover:text-black hover:border-lalqila-gold transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-lalqila-gold hover:text-black hover:border-lalqila-gold transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-lalqila-gold hover:text-black hover:border-lalqila-gold transition-all duration-300"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-sm">&copy; 2026 LalQila Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
